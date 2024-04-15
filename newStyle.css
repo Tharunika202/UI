@@ -1,0 +1,76 @@
+body{
+    height: 100vh; /*vh- viewport height */
+    /* background-image: linear-gradient(-26deg, rgb(217, 212, 212) 50%, white 50%); */
+
+    /* different types of gradient:->
+        Linear Gradients (goes down/up/left/right/diagonally)
+        Radial Gradients (defined by their center)
+        Conic Gradients (rotated around a center point)
+        repeating-conic-gradient (Repeats a conic gradient)
+        repeating-linear-gradient (Repeats a linear gradient)
+        repeating-radial-gradient (Repeats a radial gradient)
+    */
+}
+/* general */
+
+nav ul li{
+    list-style: none;
+    padding: 10px;
+}
+img{
+    max-width: 75%;
+    height: auto;
+    transform: scale(1);
+}
+svg{
+    width: 10%;
+}
+/* end of general */
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+/* top bar */
+.top-bar{
+    margin-top: 20px;
+    overflow: hidden !important;
+}
+.top-bar-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+.callIcon{
+    width: 7%;
+    transform: scale(1);
+}
+.top-barInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.actionList{
+    display: flex;
+    background-color: black;
+    padding: 5px 20px 5px 20px;
+    border-radius: 50px;
+}
+
+@media only screen and (max-width: 750px) {
+    .top-bar-wrapper{
+        padding-left: 65px;
+    }
+    img{
+        transform: scale(1.8);
+    }
+
+    .mr-25{
+        visibility: hidden;
+    }
+
+}
+/* top bar ends */

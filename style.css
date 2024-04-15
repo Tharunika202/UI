@@ -1,0 +1,142 @@
+body{
+    height: 100vh;
+    background: linear-gradient(-25deg, rgb(217, 212, 212) 50%, white 50%);
+}
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
+}
+.dropdown {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    background-color: rgb(218, 214, 214);
+    transition: 30s ease;
+}
+
+nav ul li:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+
+}
+nav ul li:hover .dropdown,
+.dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+nav ul li a:hover{
+    color: #f5a81c;
+    position: relative;
+    text-decoration: underline
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    transform: scale(0.5)
+}
+
+
+
+.titleBody{
+    margin-left: 8%;
+    margin-right: 10%;
+
+    .burgerTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .svgTitleImg{
+            width: 15%;
+        }
+        .enquiryDetails{
+            display: flex;
+            width: 40%;
+            .enquiryNumber{
+                color: orangered;
+                font-weight: 100;
+                font-style: italic;
+                margin-top: -10px;
+            }
+        }
+        nav ul{
+            display: flex;
+            background-color: black;
+            align-items: center;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .searchBar a{
+            background-color: transparent;
+        }
+        .searchBar:hover{
+            .dropdown{
+                visibility: visible;
+                opacity: 1;
+                display: block;
+                background-color: transparent;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1040px) {
+        .burgerTitle{
+            display: grid;
+            .svgTitleImg{
+                width: auto;
+                height: 100px;
+            }
+            nav ul li a{
+                margin-right: 45px;
+            }
+        }
+    }
+    .aboutNav{
+        background-color:red;
+        border-radius: 50px;
+
+        nav ul{
+            padding: 20px;
+        }
+        nav ul li{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        nav ul li a{
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        nav ul li a:hover{
+            color: #f5a81c;
+            text-decoration: underline;
+        }
+        .dropdown li a{
+            font-family:initial;
+            color: black;
+            margin-bottom: 10px;
+        }
+        .dropdown li{
+            padding-bottom: 13px;
+        }
+        .dropdown li a:hover{
+            color: #f5a81c;
+            background-color: transparent;
+        }
+    }
+}
